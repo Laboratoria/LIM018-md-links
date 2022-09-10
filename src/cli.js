@@ -11,7 +11,7 @@ const index = require('./index.js');
 //si se pasa la opcion  --validate 
 
 
-const [, , ...inputPath] = process.argv;
+const [,, ...inputPath] = process.argv;
 
 const terminalPath = inputPath[0];
 //const terminalOpts = inputPath[1];
@@ -58,8 +58,6 @@ if (!haveValidate && !haveStats) {
             const unique = [...new Set(acumulatorUnique)]
             console.log(`Unique: ${unique.length}`);
            console.log(`Broken: ${acumulatorBroken.length}`);
-
-
         });
 }
 

@@ -37,15 +37,15 @@ const readDir = (road) => fs.readdirSync(road);
 //leer archivo
 const readFile = (absolutePath) => fs.readFileSync(absolutePath, 'utf-8');
 
-
+//array de archivos
 const listFile = (road) => {
   let filesArray = [];
   const absoluteRoute = absolutePath(road);
 
-if (!existPath(absoluteRoute)) {
-  return filesArray;
-}
-  if (verifyFileType(absoluteRoute)){
+  if (!existPath(absoluteRoute)) {
+    return filesArray;
+  }
+  if (verifyFileType(absoluteRoute)) {
     if (pathIsMd(absoluteRoute) === '.md') {
       filesArray.push(absoluteRoute)
     }
@@ -103,20 +103,21 @@ const getLinks = (road) => {
 //obtiene los estados de los links
 const linksStatus = (road) => {
   const arrayStatus = getLinks(road).map((link) => fetch(link.href)
-    .then((response) => {      
+    .then((response) => {
       return {
-      href: link.href,
-      text: link.text,
-      file: link.file,
-      status: response.status,
-      message: response.status >= 200 && response.status < 400 ? 'Ok' : 'Fail',
-    }})
+        href: link.href,
+        text: link.text,
+        file: link.file,
+        status: response.status,
+        message: response.status >= 200 && response.status < 400 ? 'Ok' : 'Fail',
+      }
+    })
     .catch((error) => ({
       href: link.href,
       text: link.text,
       file: link.file,
-      status: 'Failed request',
-      message: error,
+      status: 'Not found' + " " + error,
+      message: 'Fail',
     })));
   //console.log(arrayStatus);
 
@@ -124,7 +125,7 @@ const linksStatus = (road) => {
 
 }
 
-//linksStatus('./md-link').then((ele) => console.log(ele)).catch((err) => console.log(err));
+//linksStatus('./md-linkError').then((ele) => console.log(ele)).catch((err) => console.log(err));
 
 
 

@@ -1,4 +1,5 @@
-const { absolutePath,
+const { 
+    absolutePath,
     existPath,
     verifyFileType,
     pahtIsDirectory,
@@ -6,16 +7,16 @@ const { absolutePath,
     pathIsMd,
     listFile,
     getLinks,
-    linksStatus
 } = require('../src/api.js');
 
+const dataTest = require('./dataTest.js');
 
-const test = require('./test.js')
+
 
 
 describe('absolute Path', () => {
     it('Should return an absolute path', () => {
-        expect(absolutePath('./md-link/README.md')).toBe(test.roadTest);
+        expect(absolutePath('./md-link/README.md')).toBe(dataTest.roadTest);
     });
 });
 
@@ -37,10 +38,10 @@ describe('exist Path', () => {
 
 describe('verify File Type', () => {
     it('returns true if a file exists', () => {
-        expect(verifyFileType(test.roadTest)).toBe(true);
+        expect(verifyFileType(dataTest.roadTest)).toBe(true);
     });
     it('returns false if a file exists', () => {
-        expect(verifyFileType(test.file)).toBe(false);
+        expect(verifyFileType(dataTest.file)).toBe(false);
     });
 });
 
@@ -51,7 +52,7 @@ describe('pahtIsDirectory', () => {
         expect(pahtIsDirectory("./md-link")).toBe(true);
     });
     it('return false if not directory', () => {
-        expect(pahtIsDirectory(test.roadTest)).toBe(false);
+        expect(pahtIsDirectory(dataTest.roadTest)).toBe(false);
     });
 });
 
@@ -59,7 +60,7 @@ describe('pahtIsDirectory', () => {
 
 describe('readDir', () => {
     it('read a directory', () => {
-        expect(readDir('./md-link')).toEqual(test.testDirectory)
+        expect(readDir('./md-link')).toEqual(dataTest.testDirectory)
     });
 });
 
@@ -68,19 +69,18 @@ describe('readDir', () => {
 
 describe('pathIsMd', () => {
     it(' tipo de extensión de ruta', () => {
-        expect(pathIsMd(test.roadTest)).toEqual('.md')
+        expect(pathIsMd(dataTest.roadTest)).toEqual('.md')
     });
 });
 
 
-
 describe('listFile', () => {
     it('read file ', () => {
-        expect(listFile('./md-link/README.md')).toEqual(test.resultFile);
+        expect(listFile('./md-link/README.md')).toEqual(dataTest.resultFile);
     });
 
     it('read Directory', () => {
-        expect(listFile('./md-link')).toEqual(test.resultDirectory)
+        expect(listFile('./md-link')).toEqual(dataTest.resultDirectory)
     })
 
     it('read file when file is not markdown type ', () => {
@@ -92,7 +92,14 @@ describe('listFile', () => {
 
 describe('getLinks', () => {
     it('Search for links and return as an object', () => {
-        expect(getLinks('./md-link')).toEqual(test.arrayTestResult);
+        expect(getLinks('./md-link')).toEqual(dataTest.arrayTestResult);
     });
 });
 
+
+
+describe('linksStatus', () => {
+    it('Get infoStats to file', () => {
+        expect(linksStatus()).toEqual(dataTest.result);
+    });
+});
