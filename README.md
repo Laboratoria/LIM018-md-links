@@ -41,7 +41,7 @@ algunas estadísticas.
 ### 3. Instalación de la libreria
 
 ```sh
-Módulo instalable vía npm install npm install Deleina/md-links
+npm i md-links-deleina
 ```
 
 #### 3.2 Guia de uso de la librería
