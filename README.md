@@ -1,6 +1,6 @@
 # Markdown Links
 
-(https://raw.githubusercontent.com/Deleina/LIM018-md-links/Deleina/mdLinks.jpg)
+-[](https://raw.githubusercontent.com/Deleina/LIM018-md-links/Deleina/mdLinks.jpg)
 
 
 ## Indice
@@ -50,20 +50,25 @@ Módulo instalable vía npm install npm install Deleina/md-links
 
 Ejemplo:
 
- ![--validate]
+```sh
+ --validate
+ ```
 
  - Ingresando el comando **md-Links** seguido de la **ruta** y seguido del comando **--stats**, obtendremos algunos datos estadisticos(total de links y cantidad de links unicos).
 
-  Ejemplo:
-  
-  ![--stats]
+ Ejemplo:
+ 
+  ```sh
+  --stats
+  ```
 
   - Ingresando el comando **md-Links** seguido de la **ruta** y seguido de los comandos **--stats --validate** o **--validate --stats**, obtendremos la cantidad total de links que encontremos en ese archivo, el total de links unicos encontrados y el total de links rotos.
 
   Ejemplo:
-
-  ![--stats --validate]
-
+  
+```sh
+  --stats --validate
+ ```
 
   ### 4. Autora
 
