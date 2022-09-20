@@ -1,6 +1,6 @@
 # Markdown Links
 
-(https://raw.githubusercontent.com/Deleina/LIM018-md-links/Deleina/mdLinks.jpg)
+(https://raw.githubusercontent.com/Deleina/LIM018-md-links/Deleina/md-Links.png)
 
 
 ## Indice
