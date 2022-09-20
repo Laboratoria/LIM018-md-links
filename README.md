@@ -1,6 +1,6 @@
 # Markdown Links
 
-![md](https://raw.githubusercontent.com/Deleina/LIM018-md-links/Deleina/mdLinks.jpg)
+![md](https://raw.githubusercontent.com/Deleina/LIM018-md-links/Deleina/mdLinks.png)
 
 
 ## Indice
@@ -30,7 +30,8 @@ la información que se quiere compartir.
 Dentro de una comunidad de código abierto, nos han propuesto crear una
 herramienta usando [Node.js](https://nodejs.org/), que lea y analice archivos
 en formato `Markdown`, para verificar los links que contengan y reportar
-algunas estadísticas.
+algunas estadísticas.![mdLinks-removebg-preview__1_-removebg-preview (2) (1)](https://user-images.githubusercontent.com/105658077/191167815-78af15c2-113e-4a4c-87a9-b2b7a0672e28.png)
+
 
 
 ### 2. Diagrama de flujo
