@@ -3,6 +3,7 @@
 (https://raw.githubusercontent.com/Deleina/LIM018-md-links/Deleina/md-Links.png)
 
 
+
 ## Indice
 
 - [1. Documentacion técnica de la librería](#1-resumen-del-proyecto)
@@ -30,7 +31,8 @@ la información que se quiere compartir.
 Dentro de una comunidad de código abierto, nos han propuesto crear una
 herramienta usando [Node.js](https://nodejs.org/), que lea y analice archivos
 en formato `Markdown`, para verificar los links que contengan y reportar
-algunas estadísticas.
+algunas estadísticas.![mdLinks-removebg-preview__1_-removebg-preview (2) (1)](https://user-images.githubusercontent.com/105658077/191167815-78af15c2-113e-4a4c-87a9-b2b7a0672e28.png)
+
 
 
 ### 2. Diagrama de flujo
@@ -41,7 +43,7 @@ algunas estadísticas.
 ### 3. Instalación de la libreria
 
 ```sh
-Módulo instalable vía npm install npm install Deleina/md-links
+npm i md-links-deleina
 ```
 
 #### 3.2 Guia de uso de la librería
@@ -50,20 +52,25 @@ Módulo instalable vía npm install npm install Deleina/md-links
 
 Ejemplo:
 
- ![--validate]
+```sh
+ --validate
+ ```
 
  - Ingresando el comando **md-Links** seguido de la **ruta** y seguido del comando **--stats**, obtendremos algunos datos estadisticos(total de links y cantidad de links unicos).
 
-  Ejemplo:
-  
-  ![--stats]
+ Ejemplo:
+ 
+  ```sh
+  --stats
+  ```
 
   - Ingresando el comando **md-Links** seguido de la **ruta** y seguido de los comandos **--stats --validate** o **--validate --stats**, obtendremos la cantidad total de links que encontremos en ese archivo, el total de links unicos encontrados y el total de links rotos.
 
   Ejemplo:
-
-  ![--stats --validate]
-
+  
+```sh
+  --stats --validate
+ ```
 
   ### 4. Autora
 
